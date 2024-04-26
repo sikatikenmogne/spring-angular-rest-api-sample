@@ -26,4 +26,5 @@ public class Payment {
     @ManyToOne
     private Student student;
 
+    private String file;
 }
