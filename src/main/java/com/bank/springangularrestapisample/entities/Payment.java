@@ -17,7 +17,7 @@ public class Payment {
 
     private LocalDate date;
 
-    private String amount;
+    private double amount;
 
     private PaymentType type;
 
