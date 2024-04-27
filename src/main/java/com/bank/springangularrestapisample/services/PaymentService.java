@@ -37,7 +37,6 @@ public class PaymentService {
 
     public Payment savePayment(MultipartFile file, LocalDate date, double amount,
                                PaymentType type, String studentCode) throws IOException {
-//        Path folderPath = Paths.get(System.getProperty("user.home") + "/images", "payments");
         Path folderPath = Paths.get(System.getProperty("user.home") + File.separator + "app-data" + File.separator + "payments");
         if (!Files.exists(folderPath)) {
             Files.createDirectories(folderPath);
