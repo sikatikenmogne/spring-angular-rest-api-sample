@@ -17,6 +17,8 @@ import {MatFormField, MatFormFieldModule} from "@angular/material/form-field";
 import {ReactiveFormsModule} from "@angular/forms";
 import {AuthService} from "./services/auth.service";
 import {authGuard} from "./guards/auth.guard";
+import {HttpClientModule} from "@angular/common/http";
+import {MatTableModule} from "@angular/material/table";
 
 @NgModule({
   declarations: [
@@ -40,6 +42,7 @@ import {authGuard} from "./guards/auth.guard";
     MatCardModule,
     MatFormFieldModule,
     ReactiveFormsModule
+    ReactiveFormsModule,
   ],
   providers: [AuthService],
   bootstrap: [AppComponent]
