@@ -11,6 +11,7 @@ import {MatIcon, MatIconModule} from "@angular/material/icon";
 import {MatMenu, MatMenuModule} from "@angular/material/menu";
 import {MatSidenavModule} from "@angular/material/sidenav";
 import {MatList, MatListItem} from "@angular/material/list";
+import {AdminTemplateComponent} from "./admin-template/admin-template.component";
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import {MatList, MatListItem} from "@angular/material/list";
     MatMenuModule,
     MatSidenavModule,
     MatList,
-    MatListItem
+    MatListItem,
+    AdminTemplateComponent
   ],
   providers: [],
   bootstrap: [AppComponent]
