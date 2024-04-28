@@ -10,8 +10,13 @@ import {MatChipTrailingIcon} from "@angular/material/chips";
 import {MatIcon, MatIconModule} from "@angular/material/icon";
 import {MatMenu, MatMenuModule} from "@angular/material/menu";
 import {MatSidenavModule} from "@angular/material/sidenav";
-import {MatList, MatListItem} from "@angular/material/list";
+import {MatList, MatListItem, MatListModule} from "@angular/material/list";
 import {AdminTemplateComponent} from "./admin-template/admin-template.component";
+import {MatCardModule, MatCardTitle} from "@angular/material/card";
+import {MatFormField, MatFormFieldModule} from "@angular/material/form-field";
+import {ReactiveFormsModule} from "@angular/forms";
+import {AuthService} from "./services/auth.service";
+import {authGuard} from "./guards/auth.guard";
 
 @NgModule({
   declarations: [
@@ -29,11 +34,14 @@ import {AdminTemplateComponent} from "./admin-template/admin-template.component"
     MatIconButton,
     MatMenuModule,
     MatSidenavModule,
-    MatList,
+    MatListModule,
     MatListItem,
-    AdminTemplateComponent
+    AdminTemplateComponent,
+    MatCardModule,
+    MatFormFieldModule,
+    ReactiveFormsModule
   ],
-  providers: [],
+  providers: [AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

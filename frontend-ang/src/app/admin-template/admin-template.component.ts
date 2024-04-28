@@ -7,6 +7,8 @@ import {MatMenu, MatMenuItem, MatMenuTrigger} from "@angular/material/menu";
 import {MatToolbar} from "@angular/material/toolbar";
 import {RouterLink, RouterOutlet} from "@angular/router";
 import {MatCardTitle} from "@angular/material/card";
+import {AuthService} from "../services/auth.service";
+import {NgIf} from "@angular/common";
 
 @Component({
   selector: 'app-admin-template',
@@ -26,11 +28,17 @@ import {MatCardTitle} from "@angular/material/card";
     RouterLink,
     RouterOutlet,
     MatMenuTrigger,
-    MatCardTitle
+    MatCardTitle,
+    NgIf
   ],
   templateUrl: './admin-template.component.html',
   styleUrl: './admin-template.component.css'
 })
 export class AdminTemplateComponent {
+  constructor(public authService: AuthService) {
+  }
 
+  logout() {
+    this.authService.logout();
+  }
 }
