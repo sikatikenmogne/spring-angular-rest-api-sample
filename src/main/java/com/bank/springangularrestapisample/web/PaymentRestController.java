@@ -25,6 +25,7 @@ import java.io.IOException;
 
 
 @RestController
+@CrossOrigin("*")
 public class PaymentRestController {
     private StudentRepository studentRepository;
     private PaymentRepository paymentRepository;

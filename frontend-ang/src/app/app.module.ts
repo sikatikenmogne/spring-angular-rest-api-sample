@@ -19,6 +19,7 @@ import {AuthService} from "./services/auth.service";
 import {authGuard} from "./guards/auth.guard";
 import {HttpClientModule} from "@angular/common/http";
 import {MatTableModule} from "@angular/material/table";
+import {MatPaginatorModule} from "@angular/material/paginator";
 
 @NgModule({
   declarations: [
@@ -41,8 +42,10 @@ import {MatTableModule} from "@angular/material/table";
     AdminTemplateComponent,
     MatCardModule,
     MatFormFieldModule,
-    ReactiveFormsModule
     ReactiveFormsModule,
+    HttpClientModule,
+    MatTableModule,
+    MatPaginatorModule,
   ],
   providers: [AuthService],
   bootstrap: [AppComponent]
